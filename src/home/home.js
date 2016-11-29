@@ -1,23 +1,99 @@
 import React, { PropTypes } from 'react'
+import { getJson } from '../utils/helper';
+import {  Link } from 'react-router';
 
 class Home extends React.Component {
-
+  constructor(props){
+   super(props);
+   this.state={
+      data:[]
+   }
+  }
+  componentDidMount(){
+    getJson()
+      .then( (recData) => {
+        this.setState({
+          data:recData.getJson
+        })
+      });
+  }
   render () {
     let styles= {
       home:{
         backgroundColor:'#B39DDB'
       }
     }
+    let address=`item/${this.props.url}`;
     return(
       <div className="content-warp">
         <div className="jumbotron" style={styles.home}>
-          <h1 className="text-center">Welcome!</h1>
-          <p className="text-center">xixilide</p>
-          <p><a className="btn btn-primary btn-lg" href="https://github.com/xixilide" role="button">kown More</a></p>
+          <h1 className="text-center">Hi! I Am xixilide</h1>
+          <p className="text-center">As long as your heart is sunny, no rain in your life. <br />
+            只要你的心是晴朗的，你的人生里就没有雨天。by --闫进霞</p>
        </div>
-       </div>
+      <div className="row">
+         <div className="col-sm-6 col-md-4">
+           <div className="thumbnail">
+             <div className="caption">
+               <h3>心情随笔</h3>
+               <p>   草木的芬芳荡漾在空气中，微风吹皱水面，打碎桥的倒影，垂柳依依，一群鸭子拖起长长的涟漪，在水面游过，
+                 一直游进我的记忆。</p>
+               <p>   我不愿回忆也不愿追问，时间停在那场深秋，那些鸭子游得好不自在，我看得出神，甚至想成为一只鸭子就那么什么都不想的和你游下去多好，
+                  但深情早已被锁在那个回不来的夏天。我永远记得那一场出走，
+                  带着我偏执的爱情奋不顾身去找你。我不曾后悔过，那是我欠你的勇气，但你欠我的却是一场深情。</p>
+                <p><a href="#" className="btn btn-primary" role="button">MORE ></a></p>
+      </div>
+      </div>
+    </div>
+      <div className="col-sm-6 col-md-4">
+        <div className="thumbnail thumbnail1">
+          <div className="caption">
+            <h3>博客日志</h3>
+            <ul className="list-group">
+              {this.state.data.map( (item,i) =>
+                <li className="list-group-item"　key={i}>
+                  <Link to={address}>
+                    <p> {this.props.index} {this.props.title}</p>
+                  </Link>
+                </li>)
+              }
+           </ul>
+          <p><a href="#" className="btn btn-primary" role="button"> MORE > </a></p>
+     </div>
+   </div>
+ </div>
+ <div className="col-sm-6 col-md-4">
+   <div className="thumbnail thumbnail1">
+      <div className="caption">
+        <h3>文章推荐</h3>
+        <p>
+          <ul className="list-group">
+            <li className="list-group-item"><a herf="#">Cras justo odio</a></li>
+            <li className="list-group-item"><a herf="#">Dapibus ac facilisis in</a></li>
+            <li className="list-group-item"><a herf="#">Morbi leo risus</a></li>
+            <li className="list-group-item"><a herf="#">Porta ac consectetur ac</a></li>
+            <li className="list-group-item"><a herf="#">Vestibulum at eros</a></li>
+            <li className="list-group-item"><a herf="#">Morbi leo risus</a></li>
+          </ul>
+        </p>
+        <p><a href="#" className="btn btn-primary" role="button">MORE > </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
     )
   }
 }
+
+Home.defaultProps={
+   index:1,
+   title:'这里是标题'
+}
+Home.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired
+};
 
 export default Home;

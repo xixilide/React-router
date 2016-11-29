@@ -1,6 +1,7 @@
 import React,{Component, PropTypes} from 'react';
 import axios from 'axios';
-
+import BlogCard from './card';
+import BlogCard1 from './card1';
 
 export default class Contact extends Component {
   constructor(){
@@ -20,7 +21,10 @@ export default class Contact extends Component {
   render(){
     return(
       <div>
-        {this.state.wait? '正在加载数据'　: <p>个人简介：{this.state.data.bio}</p>}
+        {this.state.wait? '正在加载数据'　: <div><p>{this.state.data.bio}</p>
+        <BlogCard />
+      <BlogCard1 />
+      </div>}
       </div>
     )
   }

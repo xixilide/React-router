@@ -6,7 +6,7 @@ export default class About extends Component {
 
 
     return(
-      <div className="">
+      <div className="about_warp">
         about
     </div>
     )

@@ -3,8 +3,34 @@ body{
 
 }
 .content-warp{
-  width: 100%;
+  width: 100vw;
 }
 .jumbotron{
   padding: 20px 30px;
+}
+.about_warp{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/c.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn{
+  background-color: #FF5252;
+}
+.btn1{
+  position: absolute;
+  right: 10vw;
+  top:180px;
+}
+.footer{
+  width: 100vw;
+  height: 20vh;
+  background-color: #616161;
+
+}
+.thumbnail1{
+  position:relative;
+  height:45vh;
+  overflow:auto
 }
