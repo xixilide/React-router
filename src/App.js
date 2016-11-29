@@ -1,12 +1,16 @@
 import React,{Component, PropTypes} from 'react'
-import $ from 'jquery'
-// import { Navbar, Nav, NavItem } from 'react-bootstrap'; // 导航组件
+import MeunBar from './component/menuBar';
+import Footer from './component/footer';
+import Header from './component/header';
+
 
 export default class App extends Component {
   render(){
     return(
       <div>
-          <p>个人简介</p>
+        <MeunBar />
+        {this.props.children}
+          <Footer />
       </div>
     )
   }
