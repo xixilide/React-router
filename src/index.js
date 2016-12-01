@@ -5,7 +5,9 @@ import './main.css';
 import Routers from './routers';
 
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
+injectTapEventPlugin();
 
 
 

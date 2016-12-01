@@ -1,29 +1,32 @@
 import React, { PropTypes } from 'react'
 import { getJson } from '../utils/helper';
 import {  Link } from 'react-router';
-
+import Blog from './blog'
 class Home extends React.Component {
-  constructor(props){
-   super(props);
+  constructor(){
+   super();
    this.state={
-      data:[]
+      data:{},
+     wait:true
    }
-  }
-  componentDidMount(){
-    getJson()
-      .then( (recData) => {
-        this.setState({
-          data:recData.getJson
-        })
-      });
-  }
+ }
+ componentDidMount(){
+   getJson()
+     .then( (recData) => {
+       this.setState({
+         data:recData.getJson,
+         wait:false
+       })
+     });
+ }
+
   render () {
     let styles= {
       home:{
         backgroundColor:'#B39DDB'
       }
     }
-    let address=`item/${this.props.url}`;
+
     return(
       <div className="content-warp">
         <div className="jumbotron" style={styles.home}>
@@ -49,15 +52,9 @@ class Home extends React.Component {
         <div className="thumbnail thumbnail1">
           <div className="caption">
             <h3>博客日志</h3>
-            <ul className="list-group">
-              {this.state.data.map( (item,i) =>
-                <li className="list-group-item"　key={i}>
-                  <Link to={address}>
-                    <p> {this.props.index} {this.props.title}</p>
-                  </Link>
-                </li>)
-              }
-           </ul>
+            <div className="list-group">
+                {this.state.data.map( (item,index) => <Blog index={item.index} title={item.title} key={index} /> ) }
+           </div>
           <p><a href="#" className="btn btn-primary" role="button"> MORE > </a></p>
      </div>
    </div>
@@ -87,13 +84,5 @@ class Home extends React.Component {
   }
 }
 
-Home.defaultProps={
-   index:1,
-   title:'这里是标题'
-}
-Home.propTypes = {
-  index: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired
-};
 
 export default Home;

@@ -1,14 +1,19 @@
-import React,{Component, PropTypes} from 'react'
+import React,{Component, PropTypes} from 'react';
 
-
+import Echert from './aboutechert'
 export default class About extends Component {
-  render(){
 
+
+
+  render(){
 
     return(
       <div className="about_warp">
-        about
-    </div>
+        
+        <Echert />
+      </div>
+
     )
   }
+
 }
