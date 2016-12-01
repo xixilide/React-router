@@ -7,7 +7,8 @@ class Echert extends React.Component {
     var myChart = echarts.init(document.getElementById('echert'));
     myChart.setOption({
       title: {
-             text: '大规模散点图'
+             text: '我的心情记录',
+             color:'#fff'
          },
          tooltip : {
              trigger: 'axis',

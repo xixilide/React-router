@@ -17,7 +17,7 @@ class MeunBar extends React.Component {
     return(
       <div>
           <ul className="nav nav-pills nav-justified" style={styles.nav}>
-            <li style={styles.li}><Link to="/" onlyActiveOnIndex={true} >Home</Link></li>
+            <li style={styles.li}><Link to="/" onlyActiveOnIndex={true} activeStyle={{backgroundColor:'#F48FB1'}} >Home</Link></li>
             <li style={styles.li}><Link to="/work" activeStyle={{backgroundColor:'#F48FB1'}}>Work</Link></li>
             <li style={styles.li}><Link to="/contact" activeStyle={{backgroundColor:'#F48FB1'}}>Contact</Link></li>
             <li style={styles.li}><Link to="/about" activeStyle={{backgroundColor:'#F48FB1'}}>About</Link></li>

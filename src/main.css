@@ -11,7 +11,7 @@ body{
 .about_warp{
   width: 100vw;
   height: 100vh;
-  background-image: url(./img/c.png);
+  background-image: url(./img/gg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -32,7 +32,7 @@ body{
 }
 .thumbnail1{
   position:relative;
-  height:45vh;
+  height:400px;
   overflow:auto
 }
 .text-center{
@@ -55,5 +55,6 @@ body{
 }
 .about_echert{
   width: 60vw;
-  height: 30vh;
+  height: 50vh;
+  color: #fff;
 }

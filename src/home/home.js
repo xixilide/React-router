@@ -6,7 +6,7 @@ class Home extends React.Component {
   constructor(){
    super();
    this.state={
-      data:{},
+    data:[],
      wait:true
    }
  }
@@ -34,7 +34,7 @@ class Home extends React.Component {
           <p className="text-center">As long as your heart is sunny, no rain in your life. <br />
             只要你的心是晴朗的，你的人生里就没有雨天。by --闫进霞</p>
        </div>
-      <div className="row">
+       <div className="row">
          <div className="col-sm-6 col-md-4">
            <div className="thumbnail">
              <div className="caption">
@@ -65,12 +65,12 @@ class Home extends React.Component {
         <h3>文章推荐</h3>
         <p>
           <ul className="list-group">
-            <li className="list-group-item"><a herf="#">Cras justo odio</a></li>
-            <li className="list-group-item"><a herf="#">Dapibus ac facilisis in</a></li>
-            <li className="list-group-item"><a herf="#">Morbi leo risus</a></li>
-            <li className="list-group-item"><a herf="#">Porta ac consectetur ac</a></li>
-            <li className="list-group-item"><a herf="#">Vestibulum at eros</a></li>
-            <li className="list-group-item"><a herf="#">Morbi leo risus</a></li>
+            <li className="list-group-item"><a href="#">Cras justo odio</a></li>
+            <li className="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
+            <li className="list-group-item"><a href="#">Morbi leo risus</a></li>
+            <li className="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
+            <li className="list-group-item"><a href="#">Vestibulum at eros</a></li>
+            <li className="list-group-item"><a href="#">Morbi leo risus</a></li>
           </ul>
         </p>
         <p><a href="#" className="btn btn-primary" role="button">MORE > </a></p>
