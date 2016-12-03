@@ -11,6 +11,7 @@ class App extends Component {
   render(){
     return(
       <div>
+        <Header />
           <MeunBar />
           {this.props.children}
             <Footer />

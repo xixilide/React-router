@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import { getJson } from '../utils/helper';
+import { getText } from '../utils/helper';
 import {  Link } from 'react-router';
 
-class Blog extends React.Component {
+class BlogText extends React.Component {
   constructor(){
     super();
     this.state={
@@ -10,22 +10,21 @@ class Blog extends React.Component {
     }
   }
   componentDidMount(){
-    getJson()
+    getText()
       .then( (recData) => {
         this.setState({
-          data:recData.getJson
+          data:recData.getText
         })
       });
-
   }
   render () {
-    let address=`item/${this.props.url}`;
+    let address=`item1/${this.props.url}`;
 
     return(
       <div>
           <li className="list-group-item"　key={this.props.index}>
             <Link to={address} style={{ textDecoration: 'none' }}>
-              <span> {this.props.index} {this.props.title}</span>
+              <span> {this.props.title}</span>
             </Link>
           </li>
 
@@ -34,13 +33,13 @@ class Blog extends React.Component {
   }
 
 }
-// Blog.defaultProps={
-//    index:1,
-//    title:'这里是标题'
-// }
-Blog.propTypes = {
+BlogText.defaultProps={
+   index:"1",
+   title:'这里是标题'
+}
+BlogText.propTypes = {
   index: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 }
 
-export default Blog;
+export default BlogText;

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import { getMd } from '../utils/helper';
+import { getT } from '../utils/helper';
 import hljs from 'highlight.js';
 import marked from 'marked';
-class Item extends React.Component {
+class ItemI extends React.Component {
   constructor(){
    super();
    this.state={
@@ -12,10 +12,10 @@ class Item extends React.Component {
  }
  componentDidMount(){
    let mdName = this.props.params.url;
-   getMd(mdName)
+   getT(mdName)
      .then( (recData) => {
        this.setState({
-         data:recData.getMd,
+         data:recData.getT,
          wait:false
        })
      });
@@ -34,4 +34,4 @@ class Item extends React.Component {
   }
 }
 
-export default Item;
+export default ItemI;

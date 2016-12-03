@@ -28,10 +28,10 @@ class  Footer extends React.Component {
       <div className="footer">
         <div className="text-center">
           <ul style={styles.ul}>
-            <li style={styles.li}><a herf="#" style={styles.a}>| 赞助本站 |</a></li>
-            <li style={styles.li}><a herf="#" style={styles.a}>| 博客好友 |</a></li>
-            <li style={styles.li}><a herf="#" style={styles.a}>| 留言板  |</a></li>
-            <li style={styles.li}><a herf="#" style={styles.a}>| 在线投稿 |</a></li>
+            <li style={styles.li}><a href="#" style={styles.a}>| 赞助本站 |</a></li>
+            <li style={styles.li}><a href="#" style={styles.a}>| 博客好友 |</a></li>
+            <li style={styles.li}><a href="#" style={styles.a}>| 留言板  |</a></li>
+            <li style={styles.li}><a href="#" style={styles.a}>| 在线投稿 |</a></li>
           </ul>
         </div>
         <p className="text-center" style={styles.p}>Copyright © 2015-2016 闫进霞个人博客

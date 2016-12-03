@@ -1,12 +1,15 @@
 import React, { PropTypes } from 'react'
 import { getJson } from '../utils/helper';
+import { getText } from '../utils/helper';
 import {  Link } from 'react-router';
-import Blog from './blog'
+import Blog from './blog';
+import BlogText from './blogtext';
 class Home extends React.Component {
   constructor(){
    super();
    this.state={
     data:[],
+    dataI:[],
      wait:true
    }
  }
@@ -18,18 +21,20 @@ class Home extends React.Component {
          wait:false
        })
      });
+     getText()
+       .then( (recData) => {
+         this.setState({
+           dataI:recData.getText,
+           wait:false
+         })
+       });
  }
 
   render () {
-    let styles= {
-      home:{
-        backgroundColor:'#B39DDB'
-      }
-    }
 
     return(
       <div className="content-warp">
-        <div className="jumbotron" style={styles.home}>
+        <div className="jumbotron home_contain">
           <h1 className="text-center">Hi! I Am xixilide</h1>
           <p className="text-center">As long as your heart is sunny, no rain in your life. <br />
             只要你的心是晴朗的，你的人生里就没有雨天。by --闫进霞</p>
@@ -53,7 +58,7 @@ class Home extends React.Component {
           <div className="caption">
             <h3>博客日志</h3>
             <div className="list-group">
-                {this.state.data.map( (item,index) => <Blog index={item.index} title={item.title} key={index} /> ) }
+                {this.state.data.map( (item,index) => <Blog index={item.index} title={item.title} key={index} url={item.url}/> ) }
            </div>
           <p><a href="#" className="btn btn-primary" role="button"> MORE > </a></p>
      </div>
@@ -63,16 +68,9 @@ class Home extends React.Component {
    <div className="thumbnail thumbnail1">
       <div className="caption">
         <h3>文章推荐</h3>
-        <p>
-          <ul className="list-group">
-            <li className="list-group-item"><a href="#">Cras justo odio</a></li>
-            <li className="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
-            <li className="list-group-item"><a href="#">Morbi leo risus</a></li>
-            <li className="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
-            <li className="list-group-item"><a href="#">Vestibulum at eros</a></li>
-            <li className="list-group-item"><a href="#">Morbi leo risus</a></li>
-          </ul>
-        </p>
+          <div className="list-group">
+              {this.state.dataI.map( (item1,index) => <BlogText index={item1.index} title={item1.title} key={index} url={item1.url} /> ) }
+        </div>
         <p><a href="#" className="btn btn-primary" role="button">MORE > </a></p>
         </div>
       </div>

@@ -22,4 +22,26 @@ function getMd(add) {
     });
 }
 
-export { getJson,getMd };
+function getText() {
+  let address = `https://raw.githubusercontent.com/xixilide/demoData/master/text.json`;
+  return axios.get(address)
+    .then( (res) => (
+      { getText:res.data }
+    ))
+    .catch(function (error) {
+      alert(error);
+    });
+}
+
+function getT(arr) {
+  let address = `https://raw.githubusercontent.com/xixilide/demoData/master/textblog/${arr}.md`;
+  return axios.get(address)
+    .then( (res) => (
+      { getT:res.data }
+    ))
+    .catch(function (error) {
+      alert(error);
+    });
+}
+
+export { getJson,getMd,getText,getT};

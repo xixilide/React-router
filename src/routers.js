@@ -6,6 +6,7 @@ import Work from './work/work.js';
 import Home from './home/home.js';
 import Contact from './contact/contact.js';
 import Item from './Item/Item';
+import ItemI from './Item/item1';
 
 
 class Routers extends React.Component {
@@ -19,6 +20,7 @@ class Routers extends React.Component {
           <Route path="work" component={Work} />
           <Route path="contact" component={Contact} />
           <Route path="/item/:url" component={Item} />
+         <Route path="/item1/:url" component={ItemI} />
        </Route>
      </Router>
    </div>

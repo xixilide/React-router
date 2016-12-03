@@ -2,16 +2,39 @@ body{
   -webkit-font-smoothing: antialiased;
 
 }
+*{margin: 0;padding: 0}
 .content-warp{
   width: 100vw;
+}
+.header{
+  width: 100vw;
+  height: 14vh;
+  margin: 0 auto;
+  /*background-image: url(./img/11.jpg);
+  background-size: cover;*/
+  background-color: #FBE9E7
+}
+.header h2{
+  margin-left: 10vw;
+ font-family:'NaiYou768c10cb316c23';
+}
+.home_contain{
+  background-image: url(./img/s10.jpg);
+  background-size: cover;
+}
+.home_contain h1{
+  color:#424242
 }
 .jumbotron{
   padding: 20px 30px;
 }
+.list-group{
+  font-size: 18px;
+}
 .about_warp{
   width: 100vw;
   height: 100vh;
-  background-image: url(./img/gg.jpg);
+  background-image: url(./img/b1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -48,6 +71,19 @@ body{
   margin: 0;
   color:#00bcd4;
 }
+.show-git{
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 2px 6px;
+  justify-content: space-around;
+  color: teal;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+.git_serch{
+  display: flex;
+  flex-direction: column;
+}
 .about-form{
   display: inline;
   width: 80%;
@@ -57,4 +93,85 @@ body{
   width: 60vw;
   height: 50vh;
   color: #fff;
+}
+
+/*md文件样式*/
+.post-content {
+  color: #6d6d6d;
+  line-height: 1.8;
+  width: 90%;
+  margin:0 auto;
+  margin-top: 10xp;
+  border: 1px solid #ddd;
+  background-color: #CFD8DC;
+  padding-top: 1em;
+  padding-bottom: 30px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin:20px;
+  border-radius:20px;
+}
+.post-content h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+}
+.post-content ol {
+  padding-left: 20px;
+}
+.post-content ul {
+  padding-left: 20px;
+}
+.post-content li {
+  list-style-type: circle;
+}
+.post-content pre {
+  background-color: #f8f8f8;
+  display: block;
+  padding: 20px;
+  font-size: 16px;
+  color: #777777;
+  overflow-x: auto;
+  font-weight: 600;
+}
+.post-content pre code {
+  background-color: none;
+}
+.post-content p code {
+  font-size: 14px;
+  background-color: pink;
+  padding: 4px;
+}
+.post-content blockquote {
+  border-left: 5px solid #00bcd4;
+  font-style: italic;
+  font-weight: 400;
+  padding-left: 20px;
+  line-height: 30px;
+  margin-bottom: 33px;
+  margin-left: 0;
+}
+.post-content p {
+  color: #606060;
+  font-weight: 400;
+  line-height: 1.95;
+  margin-bottom: 20px;
+}
+.post-content img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.post-content a {
+  color: #ff4081;
+  text-decoration: none;
+}
+.post-content a:hover {
+  color: #444;
+}
+.post-content a.video {
+  display: block;
+  line-height: 2.3;
+  text-align: center;
 }

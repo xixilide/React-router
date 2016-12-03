@@ -1,6 +1,8 @@
 import React,{Component, PropTypes} from 'react';
 
 import Echert from './aboutechert'
+import Serch from './serch'
+
 export default class About extends Component {
 
 
@@ -9,7 +11,7 @@ export default class About extends Component {
 
     return(
       <div className="about_warp">
-        
+        <Serch />
         <Echert />
       </div>
 
