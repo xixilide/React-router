@@ -17,6 +17,7 @@ body{
 .header h2{
   margin-left: 10vw;
  font-family:'NaiYou768c10cb316c23';
+ color: #757575
 }
 .home_contain{
   background-image: url(./img/s10.jpg);

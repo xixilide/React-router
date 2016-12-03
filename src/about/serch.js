@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import axios from 'axios';
-import Img from '../img/a3.jpg'
 class Serch extends React.Component {
   constructor(){
     super();
@@ -34,7 +33,7 @@ class Serch extends React.Component {
      return(
        <div>
          <div className="text-center">
-         <img src={Img} style={styles.img}/></div>
+         <img src={info.avatar_url} style={styles.img}/></div>
        <h3 className="text-center">{info.login}</h3>
          <div className='show-git'>
            <p>followers<br/>{info.followers+100}</p>
