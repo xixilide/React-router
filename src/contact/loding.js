@@ -10,11 +10,10 @@ class Loding extends React.Component {
   }
   render () {
   return(
-    <div>
+    <div className="text-center">
        <CircularProgress />
     </div>
   )
   }
 }
-
 export default Loding;
