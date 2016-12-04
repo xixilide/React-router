@@ -12,12 +12,17 @@ body{
   margin: 0 auto;
   /*background-image: url(./img/11.jpg);
   background-size: cover;*/
-  background-color: #FBE9E7
+  /*background-color: #FBE9E7*/
 }
 .header h2{
   margin-left: 10vw;
- font-family:'NaiYou768c10cb316c23';
- color: #757575
+  color: #757575
+}
+.css76ca5032116c23{
+  font-size: 1.4em;
+}
+.leaf{
+  font-family:'LiDeBiao-Xing376c972ec916c23';
 }
 .home_contain{
   background-image: url(./img/s10.jpg);
@@ -39,6 +44,11 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.about_echert{
+  width: 200px;
+  height: auto;
+  float: left;
+}
 .btn{
   background-color: #FF5252;
 }
@@ -53,11 +63,6 @@ body{
   height: 20vh;
   background-color: #616161;
 
-}
-.thumbnail1{
-  position:relative;
-  height:400px;
-  overflow:auto
 }
 .text-center{
   font-family: 'Raleway75d95108216c23'
@@ -94,6 +99,15 @@ body{
   width: 60vw;
   height: 50vh;
   color: #fff;
+}
+/*work*/
+.row2{
+  margin-top: 40px;
+}
+.thumbnail1{
+  position:relative;
+  max-height: 20vw;
+  overflow:auto
 }
 
 /*md文件样式*/

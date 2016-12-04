@@ -36,7 +36,8 @@ class Serch extends React.Component {
        <div>
          {this.state.wait ? <Loding /> : <div>
            <div className="text-center">
-           <img src={info.avatar_url} style={styles.img}/></div>
+             <a href="https://github.com/xixilide"> <img src={info.avatar_url} style={styles.img}/></a>
+           </div>
          <h3 className="text-center">{info.login}</h3>
            <div className='show-git'>
              <p>followers<br/>{info.followers+100}</p>

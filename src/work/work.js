@@ -13,64 +13,67 @@ class Work extends React.Component {
 
   render () {
     return(
-      <div className="row">
+        <div className="row row1">
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="http://xixilide.coding.me/mydoc" className="thumbnail">
               <img src={Img1} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>我的js学习笔记</h4>
+          <p>关于javascript的知识点</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
             <a href="#" className="thumbnail">
               <img src={Img2} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>React项目笔记</h4>
+          <p>初学React基础知识的学习笔记</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="http://xixilide.coding.me/API" className="thumbnail">
               <img src={Img3} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>Express－React 框架实例笔记</h4>
+              <p>记录一个完整的项目</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
             <a href="#" className="thumbnail">
               <img src={Img4} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>mongoDB数据库</h4>
+          <p>初学后台知识整理</p>
             </a>
           </div>
+        <div><h1　style={{color:'#263238',padding:'20px'}} className="css76d94ee1316c23">作品合集</h1></div>
+        <div className="row row2">
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="https://xixilide.github.io/maisi.html" className="thumbnail">
               <img src={Img5} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>作品一：迈思设计</h4>
+              <p>2016.5.6</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="http://model.100autoshow.com/" className="thumbnail">
               <img src={Img6} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>作品二：模特大赛</h4>
+              <p>2015.10.6</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="http://www.cnpickups.com" className="thumbnail">
               <img src={Img7} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>作品三：皮卡网站</h4>
+              <p>2016.1.5</p>
             </a>
           </div>
           <div className="col-xs-6 col-md-3">
-            <a href="#" className="thumbnail">
+            <a href="http://www.elutongxing.com" className="thumbnail">
               <img src={Img8} />
-                <h3>Thumbnail label</h3>
-                <p>Thumbnail caption...</p>
+            <h4>作品四：ｅ路同行</h4>
+              <p>2016.4.6</p>
             </a>
           </div>
       </div>
+    </div>
     )
   }
 }

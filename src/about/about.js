@@ -13,6 +13,7 @@ export default class About extends Component {
       <div className="about_warp">
         <Serch />
         <Echert />
+
       </div>
 
     )

@@ -34,7 +34,7 @@ class Home extends React.Component {
 
     return(
       <div className="content-warp">
-        <div className="jumbotron home_contain">
+        <div className="jumbotron home_contain ">
           <h1 className="text-center">Hi! I Am xixilide</h1>
           <p className="text-center">As long as your heart is sunny, no rain in your life. <br />
             只要你的心是晴朗的，你的人生里就没有雨天。by --闫进霞</p>
